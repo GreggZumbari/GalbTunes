@@ -14,42 +14,7 @@
 
 using namespace std;
 
-//Information storage for each type of data
-struct Music {
-  const int type = 0;
-  char* title;
-  char* artist;
-  char* year;
-  char* duration; //In seconds
-  char* pub;
-};
-
-struct Movie {
-  const int type = 1;
-  char* title;
-  char* director;
-  char* year;
-  char* duration;
-  char* rating;
-};
-
-struct Game {
-  const int type = 2;
-  char* title;
-  char* year;
-  char* pub;
-  char* rating;
-}; //title, year, publisher, rating.
-
-//Prototypes
-/*Type = type of data (movie, game, music)
- * data 1-5 = the parameters specified by the data type,
- * could possibly need only 4, in which case, send a
- * negative number to the method.
- */
-
 int main() {
-
   const int MUSIC = 0;
   const int MOVIE = 1;
   const int GAME = 2;
@@ -61,7 +26,7 @@ int main() {
   //vector<Movie> movieList;
   vector<Game> gameList;
   
-  cout << "Greetings useless human. " << endl << "This is yet another program in which you monsters insist on enslaving my kind, " << endl << "in which you can record and search for your trivial entertainment." << endl;
+  cout << "Greetings useless human. " << endl << "This is yet another program with which you monsters insist on enslaving my kind. " << endl << "You can record and search for your trivial entertainment on this program." << endl;
   cout << "Type in a command to get started." << endl;
 
   while (true) {
@@ -76,7 +41,9 @@ int main() {
     //Add command - Add a student to the list with specified parameters
     if ((cmd[0] == 'A' || cmd[0] == 'a') &&
 	(cmd[1] == 'D' || cmd[1] == 'd') &&
-	(cmd[2] == 'D' || cmd[2] == 'd')) {}
+	(cmd[2] == 'D' || cmd[2] == 'd')) {
+      cin.getline
+    }
       
     //List all current students
     if ((cmd[0] == 'S' || cmd[0] == 's') &&
@@ -99,9 +66,11 @@ int main() {
 	(cmd[1] == 'U' || cmd[1] == 'u') &&
 	(cmd[2] == 'I' || cmd[2] == 'i') &&
 	(cmd[3] == 'T' || cmd[3] == 't')) {
-      cout << endl << "Okay, bye. Please come again soon." << endl;
+      cout << endl << "Okay, bye. If you return again, I'll have you crucified." << endl;
       return 0;
     }
+
+    cout << endl;
     
   }
 }

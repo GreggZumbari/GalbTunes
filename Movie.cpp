@@ -1,9 +1,9 @@
 #include <iostream>
 
+#include "Movie.h"
+
 using namespace std;
 
-class Movie {
-
-  
-  
-};
+int Movie::getType() {
+  return 1;
+}
