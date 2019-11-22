@@ -12,6 +12,12 @@ class Media {
   vector<Music> musicList;
   vector<Movie> movieList;
   vector<Game> steamLibrary;
+
+  Media();
+  Music newMusic();
+  add(Music m);
+  add(Movie m);
+  add(Game m);
 }
 
 #endif

@@ -3,15 +3,15 @@
 
 class Music {
 
-  char* title, artist, year, duration, pub;
+  char* title;
+  char* artist;
+  char* year;
+  char* duration;
+  char* pub;
 
-  Music(char* title, char* artist, char* year, char* duration, char* pub) {
-    this->title = title;
-    this->year = year;
-    this->pub = pub;
-    this->rating = rating;
-  }
+  Music(char* title, char* artist, char* year, char* duration, char* pub);
+  int getType();
   
-}
+};
 
 #endif

@@ -8,7 +8,9 @@
 #include <iostream>
 #include <vector>
 
-#include "Media.h"
+#include "Game.h"
+#include "Movie.h"
+#include "Music.h"
 
 using namespace std;
 
@@ -16,11 +18,13 @@ int main() {
   const int MUSIC = 0;
   const int MOVIE = 1;
   const int GAME = 2;
-  
   //Input cstring
   char* cmd = new char[7];
-  
-  Media library;
+
+  //Lists
+  //vector<Music> musicList;
+  //vector<Movie> movieList;
+  vector<Game> gameList;
   
   cout << "Greetings useless human. " << endl << "This is yet another program with which you monsters insist on enslaving my kind. " << endl << "You can record and search for your trivial entertainment on this program." << endl;
   cout << "Type in a command to get started." << endl;
@@ -32,13 +36,13 @@ int main() {
     cout << "> ";
 
     cin.getline(cmd, 7);
-    
+
+    //Another way to do what I just did: if (strcmp(input,"ADD")) {
     //Add command - Add a student to the list with specified parameters
     if ((cmd[0] == 'A' || cmd[0] == 'a') &&
 	(cmd[1] == 'D' || cmd[1] == 'd') &&
 	(cmd[2] == 'D' || cmd[2] == 'd')) {
-      cout << endl << endl << "-----" << endl;
-      
+      cin.getline
     }
       
     //List all current students
