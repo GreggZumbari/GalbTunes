@@ -19,8 +19,9 @@ int main() {
   
   //Input cstring
   char* cmd = new char[7];
-  
-  Media library;
+
+  //Data holder for all eternity
+  Media media;
   
   cout << "Greetings useless human. " << endl << "This is yet another program with which you monsters insist on enslaving my kind. " << endl << "You can record and search for your trivial entertainment on this program." << endl;
   cout << "Type in a command to get started." << endl;
@@ -32,12 +33,12 @@ int main() {
     cout << "> ";
 
     cin.getline(cmd, 7);
-    
+
+    //Another way to do what I just did: if (strcmp(input,"ADD")) {
     //Add command - Add a student to the list with specified parameters
     if ((cmd[0] == 'A' || cmd[0] == 'a') &&
 	(cmd[1] == 'D' || cmd[1] == 'd') &&
 	(cmd[2] == 'D' || cmd[2] == 'd')) {
-      cout << endl << endl << "-----" << endl;
       
     }
       
@@ -62,7 +63,7 @@ int main() {
 	(cmd[1] == 'U' || cmd[1] == 'u') &&
 	(cmd[2] == 'I' || cmd[2] == 'i') &&
 	(cmd[3] == 'T' || cmd[3] == 't')) {
-      cout << endl << "Okay, bye. If you return again, I'll have you crucified." << endl;
+      cout << endl << "Bye. If you return, you will get coal in your stocking." << endl;
       return 0;
     }
 

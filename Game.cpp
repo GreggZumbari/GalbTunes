@@ -1,3 +1,8 @@
+/*
+ * The c++ file for the Game object. 
+ * Inputs the details of a single game, including title, year, publisher, and rating.
+ * See Media.h for more details.
+ */
 #include <iostream>
 
 #include "Game.h"

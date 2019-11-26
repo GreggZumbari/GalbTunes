@@ -1,3 +1,8 @@
+/*
+ * The c++ file for the Movie object. 
+ * Inputs the details of a single movie, including title, director, year, duration, and rating.
+ * See Media.h for more details.
+ */
 #include <iostream>
 
 #include "Movie.h"
