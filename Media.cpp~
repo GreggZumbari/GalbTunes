@@ -84,18 +84,6 @@ Game Media::newGame() {
   return m;
 }
 
-vector<Music> Media::getMusicList() {
-  return musicList;
-}
-
-vector<Movie> Media::getMovieList() {
-  return movieList;
-}
-
-vector<Game> Media::getGameList() {
-  return steamLibrary;
-}
-
 //The following methods will add any of the 3 object types to their corresponding lists
 void Media::add(Music m) {
   musicList.push_back(m);

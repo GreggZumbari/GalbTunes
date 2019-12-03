@@ -9,12 +9,30 @@
 
 using namespace std;
 
-Movie::Movie(char* title, char* director, char* year, char* duration, char* rating) {
+Movie::Movie() {}
+
+void Movie::setFields(char* title, char* director, char* year, char* duration, char* rating) {
   this->title = title;
   this->director = director;
   this->year = year;
   this->duration = duration;
   this->rating = rating;
+}
+
+char* Movie::getTitle() {
+  return title;
+}
+char* Movie::getDirector() {
+  return director;
+}
+char* Movie::getYear() {
+  return year;
+}
+char* Movie::getDuration() {
+  return duration;
+}
+char* Movie::getRating() {
+  return rating;
 }
 
 int Movie::getType() {

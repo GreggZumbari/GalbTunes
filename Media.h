@@ -6,25 +6,31 @@
 #ifndef MEDIA_H
 #define MEDIA_H
 
-#include <iostream>
 #include <vector>
 
 #include "Music.h"
 #include "Movie.h"
 #include "Game.h"
 
+using namespace std;
+
 class Media {
  public:
-  std::vector<Music> musicList;
-  std::vector<Movie> movieList;
-  std::vector<Game> steamLibrary;
+  vector<Music> musicList;
+  vector<Movie> movieList;
+  vector<Game> steamLibrary;
 
   Media();
 
   Music newMusic();
-  add(Music m);
-  add(Movie m);
-  add(Game m);
+  Movie newMovie();
+  Game newGame();
+  vector<Music> getMusicList();
+  vector<Movie> getMovieList();
+  vector<Game> getGameList();
+  void add(Music m);
+  void add(Movie m);
+  void add(Game m);
 };
 
 #endif

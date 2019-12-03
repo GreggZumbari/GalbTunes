@@ -1,0 +1,31 @@
+/*
+ * The header file for the Movie object. 
+ * Holds the details of a single movie, including title, director, year, duration, and rating.
+ * See Media.h for more details.
+ */
+#ifndef MEDIA_H
+#define MEDIA_H
+
+#include <vector>
+
+#include "Music.h"
+#include "Movie.h"
+#include "Game.h"
+
+class Media {
+ public:
+  std::vector<Music> musicList;
+  std::vector<Movie> movieList;
+  std::vector<Game> steamLibrary;
+
+  Media();
+
+  Music newMusic();
+  Movie newMovie();
+  Game newGame();
+  void add(Music m);
+  void add(Movie m);
+  void add(Game m);
+};
+
+#endif

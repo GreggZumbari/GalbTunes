@@ -10,14 +10,19 @@
 
 class Game {
  public:
+  Game();
+  void setFields(char* title, char* year, char* pub, char* rating);
+  char* getTitle();
+  char* getYear();
+  char* getPublisher();
+  char* getRating();
+  int getType();
+
+ private:
   char* title;
   char* year;
   char* pub;
   char* rating;
-
-  Game(char* title, char* year, char* pub, char* rating);
-  int getType();
-  
 };
 
 #endif

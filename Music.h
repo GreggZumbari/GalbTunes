@@ -12,6 +12,11 @@ class Music {
  public:
   Music();
   void setFields(char* title, char* artist, char* year, char* duration, char* pub);
+  char* getTitle();
+  char* getArtist();
+  char* getYear();
+  char* getDuration();
+  char* getPublisher();
   int getType();
 
  private:

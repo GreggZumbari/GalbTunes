@@ -9,17 +9,22 @@
 #include <vector>
 
 class Movie {
-
  public:
+  Movie();
+  void setFields(char* title, char* director, char* year, char* duration, char* rating);
+  char* getTitle();
+  char* getDirector();
+  char* getYear();
+  char* getDuration();
+  char* getRating();
+  int getType();
+  
+ private:
   char* title;
   char* director;
   char* year;
   char* duration;
   char* rating;
-
-  Movie(char* title, char* director, char* year, char* duration, char* rating);
-  int getType();
-  
 };
 
 #endif
