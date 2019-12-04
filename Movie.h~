@@ -1,25 +1,25 @@
+/*
+ * The header file for the Movie object. 
+ * Holds the details of a single movie, including title, director, year, duration, and rating.
+ * See Media.h for more details.
+ */
 #ifndef MOVIE_H
 #define MOVIE_H
+
+#include <vector>
 
 class Movie {
 
  public:
-  char* title;
-  char* director;
+  Movie();
+  void setFields(char* title, char* artist, char* year, char* duration, char* pub);
+  int getType();
+
+ private:
+  char* title;              
+  char* artist;
   char* year;
   char* duration;
-  char* rating;
-
-  Movie(char* title, char* director, char* year, char* duration, char* rating) {
-    this->title = title;
-    this->director = director;
-    this->year = year;
-    this->duration = duration;
-    this->rating = rating;
-  }
-
-  int getType();
-  
-};
+  char* pub;
 
 #endif

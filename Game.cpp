@@ -9,11 +9,26 @@
 
 using namespace std;
 
-Game::Game(char* title, char* year, char* pub, char* rating) {
+Game::Game() {}
+
+void Game::setFields(char* title, char* year, char* pub, char* rating) {
   this->title = title;
   this->year = year;
   this->pub = pub;
   this->rating = rating;
+}
+
+char* Game::getTitle() {
+  return title;
+}
+char* Game::getYear() {
+  return year;
+}
+char* Game::getPublisher() {
+  return pub;
+}
+char* Game::getRating() {
+  return rating;
 }
 
 int Game::getType() {

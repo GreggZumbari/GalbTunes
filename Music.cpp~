@@ -18,22 +18,6 @@ void Music::setFields(char* title, char* artist, char* year, char* duration, cha
   this->duration = duration;
   this->pub = pub;
 }
-
-char* Music::getTitle() {
-  return title;
-}
-char* Music::getArtist() {
-  return artist;
-}
-char* Music::getYear() {
-  return year;
-}
-char* Music::getDuration() {
-  return duration;
-}
-char* Music::getPublisher() {
-  return pub;
-}
 		      
 int Music::getType() {
   return 0;
