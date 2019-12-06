@@ -99,16 +99,14 @@ vector<Game> Media::getGameList() {
 
 //The following methods will brutally murder any of the 3 object types that are specified
 void Media::kill(int type, int address) {
-  cout << type << ", " << address << endl;
-  if (type = 0) { //Music
-    Music m;
-    musicList[address] = m;
-    //musicList.erase(musicList.begin() + (address - 1));
+  cout << "In the kill command: " << type << ", " << address << endl;
+  if (type == 0) { //Music
+    musicList.erase(musicList.begin() + (address - 1));
   }
-  if (type = 1) { //Movie
+  if (type == 1) { //Movie
     movieList.erase(movieList.begin() + (address - 1));
   }
-  if (type = 2) { //Game
+  if (type == 2) { //Game
     steamLibrary.erase(steamLibrary.begin() + (address - 1));
   }
 }

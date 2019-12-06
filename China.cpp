@@ -118,6 +118,7 @@ int main() {
 
 Media search(Media media, int setting) {
   char* cmd = new char[100];
+  char* res = new char[100];
   //These are here to prevent me from having to do math later
   int iter = 0;
   int iter2 = 0;
@@ -159,9 +160,6 @@ Media search(Media media, int setting) {
 	  if (i < a.size()) {
             if (strcmp(a[i].getTitle(), cmd) == 0) {
 
-	      typeList[iter2] = 0;
-	      addList[iter2] = i;
-	      iter2++;
 	      //Oh look, a matching search
 	      cout << "Result #" << ++iter << " - " << endl;
 	      cout << "Type: Music" << endl;
@@ -171,15 +169,23 @@ Media search(Media media, int setting) {
 	      cout << "Duration: " << a[i].getDuration() << endl;
 	      cout << "Publisher: " << a[i].getPublisher() << endl << endl;
 	      rsCount++;
+
+	      //Deleting all recorded addresses for search results
+  	      if (setting == DELETE) {
+    	        cout << "Are you sure you want to delete this? (y/n)" << endl;
+    	        cin >> res; cin.clear(); cin.ignore(10000, '\n');
+
+                if (res[0] == 'Y' || res[0] == 'y') {
+                  cout << "Song " << a[i].getTitle() << " deleted." << endl;
+		  media.kill(0, i);
+		  return media;
+                }
+              }
 	    }
 	  }
 	  //Movie List
 	  if (i < b.size()) {
 	    if (strcmp(b[i].getTitle(), cmd) == 0) {
-
-	      typeList[iter2] = 1;
-	      addList[iter2] = i;
-	      iter2++;
 
 	      cout << "Result #" << ++iter << " - " << endl;
 	      cout << "Type: Movie" << endl;
@@ -189,15 +195,23 @@ Media search(Media media, int setting) {
 	      cout << "Duration: " << b[i].getDuration() << endl;
 	      cout << "Rating: " << b[i].getRating() << endl << endl;
 	      rsCount++;
+
+              //Deleting all recorded addresses for search results
+  	      if (setting == DELETE) {
+    	        cout << "Are you sure you want to delete this? (y/n)" << endl;
+    	        cin >> res; cin.clear(); cin.ignore(10000, '\n');
+
+                if (res[0] == 'Y' || res[0] == 'y') {
+                  cout << "Movie " << b[i].getTitle() << " deleted." << endl;
+		  media.kill(1, i);
+		  return media;
+                }
+              }
 	    }
 	  }
 	  //Game List
 	  if (i < c.size()) {
 	    if (strcmp(c[i].getTitle(), cmd) == 0) {
-
-	      typeList[iter2] = 2;
-	      addList[iter2] = i;
-	      iter2++;
 
 	      cout << "Result #" << ++iter << " - " << endl;
 	      cout << "Type: Game" << endl;
@@ -206,6 +220,18 @@ Media search(Media media, int setting) {
 	      cout << "Publisher: " << c[i].getPublisher() << endl;
 	      cout << "Rating: " << c[i].getRating() << endl << endl;
 	      rsCount++;
+
+	      //Deleting all recorded addresses for search results
+  	      if (setting == DELETE) {
+    	        cout << "Are you sure you want to delete this? (y/n)" << endl;
+    	        cin >> res; cin.clear(); cin.ignore(10000, '\n');
+
+                if (res[0] == 'Y' || res[0] == 'y') {
+                  cout << "Game " << c[i].getTitle() << " deleted." << endl;
+		  media.kill(2, i);
+		  return media;
+                }
+              }
 	    }
 	  }
 	}
@@ -226,10 +252,6 @@ Media search(Media media, int setting) {
       if (i < a.size()) {
 	if (strcmp(a[i].getYear(), cmd) == 0) {
 		
-	  typeList[iter2] = 0;
-	  addList[iter2] = i;
-	  iter2++;
-		
 	  //Oh look, a matching search
 	  cout << "Result #" << ++iter << " - " << endl;
 	  cout << "Type: Music" << endl;
@@ -239,15 +261,23 @@ Media search(Media media, int setting) {
 	  cout << "Duration: " << a[i].getDuration() << endl;
 	  cout << "Publisher: " << a[i].getPublisher() << endl << endl;
 	  rsCount++;
+
+	  //Deleting all recorded addresses for search results
+  	  if (setting == DELETE) {
+    	    cout << "Are you sure you want to delete this? (y/n)" << endl;
+    	    cin >> res; cin.clear(); cin.ignore(10000, '\n');
+
+            if (res[0] == 'Y' || res[0] == 'y') {
+              cout << "Song " << a[i].getTitle() << " deleted." << endl;
+	      media.kill(0, i);
+	      return media;
+            }
+          }
 	}
       }
       //Movie List
       if (i < b.size()) {
 	if (strcmp(b[i].getYear(), cmd) == 0) {
-		
-	  typeList[iter2] = 1;
-	  addList[iter2] = i;
-	  iter2++;
 		
 	  cout << "Result #" << ++iter << " - " << endl;
 	  cout << "Type: Movie" << endl;
@@ -257,15 +287,23 @@ Media search(Media media, int setting) {
 	  cout << "Duration: " << b[i].getDuration() << endl;
 	  cout << "Rating: " << b[i].getRating() << endl << endl;
 	  rsCount++;
+
+	  //Deleting all recorded addresses for search results
+  	  if (setting == DELETE) {
+    	    cout << "Are you sure you want to delete this? (y/n)" << endl;
+    	    cin >> res; cin.clear(); cin.ignore(10000, '\n');
+
+            if (res[0] == 'Y' || res[0] == 'y') {
+              cout << "Movie " << c[i].getTitle() << " deleted." << endl;
+	      media.kill(1, i);
+	      return media;
+            }
+          }
 	}
       }
       //Game List
       if (i < c.size()) {
 	if (strcmp(c[i].getYear(), cmd) == 0) {
-		
-	  typeList[iter2] = 2;
-	  addList[iter2] = i;
-	  iter2++;
 		
 	  cout << "Result #" << ++iter << " - " << endl;
 	  cout << "Type: Game" << endl;
@@ -274,6 +312,18 @@ Media search(Media media, int setting) {
 	  cout << "Publisher: " << c[i].getPublisher() << endl;
 	  cout << "Rating: " << c[i].getRating() << endl << endl;
 	  rsCount++;
+
+	  //Deleting all recorded addresses for search results
+  	  if (setting == DELETE) {
+    	    cout << "Are you sure you want to delete this? (y/n)" << endl;
+    	    cin >> res; cin.clear(); cin.ignore(10000, '\n');
+
+            if (res[0] == 'Y' || res[0] == 'y') {
+              cout << "Game " << c[i].getTitle() << " deleted." << endl;
+	      media.kill(2, i);
+            }
+	    return media;
+          }
 	}
       }
     }
@@ -284,18 +334,6 @@ Media search(Media media, int setting) {
   }
   if (rsCount == 0) {
     cout << "NO RESULTS FOUND" << endl;
-  }
-  //Deleting all recorded addresses for search results
-  else if (setting == DELETE && rsCount != -1) {
-    cout << "Are you sure you want to delete all of these? (y/n)" << endl;
-    cin >> cmd; cin.clear(); cin.ignore();
-
-    if (cmd[0] == 'Y' || cmd[0] == 'y') {
-      for (int i = 0; i < iter2; i++) {
-        media.kill(typeList[iter2], addList[iter2]);  
-      }
-      cout << "Success. All of the above have been deleted." << endl;
-    }
   }
   return media;
 }
