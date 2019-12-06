@@ -11,6 +11,7 @@
 class Music {
  public:
   Music();
+  ~Music();
   void setFields(char* title, char* artist, char* year, char* duration, char* pub);
   char* getTitle();
   char* getArtist();

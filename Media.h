@@ -15,11 +15,8 @@
 using namespace std;
 
 class Media {
+	
  public:
-  vector<Music> musicList;
-  vector<Movie> movieList;
-  vector<Game> steamLibrary;
-
   Media();
 
   Music newMusic();
@@ -28,9 +25,16 @@ class Media {
   vector<Music> getMusicList();
   vector<Movie> getMovieList();
   vector<Game> getGameList();
+  void kill(int type, int address);
   void add(Music m);
   void add(Movie m);
   void add(Game m);
+  
+ private:
+  vector<Music> musicList;
+  vector<Movie> movieList;
+  vector<Game> steamLibrary;
+
 };
 
 #endif

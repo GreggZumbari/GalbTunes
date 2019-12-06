@@ -12,20 +12,29 @@
 #include "Movie.h"
 #include "Game.h"
 
-class Media {
- public:
-  std::vector<Music> musicList;
-  std::vector<Movie> movieList;
-  std::vector<Game> steamLibrary;
+using namespace std;
 
+class Media {
+	
+ public:
   Media();
 
   Music newMusic();
   Movie newMovie();
   Game newGame();
+  vector<Music> getMusicList();
+  vector<Movie> getMovieList();
+  vector<Game> getGameList();
+  void kill(int type, iterator address);
   void add(Music m);
   void add(Movie m);
   void add(Game m);
+  
+ private:
+  vector<Music> musicList;
+  vector<Movie> movieList;
+  vector<Game> steamLibrary;
+
 };
 
 #endif

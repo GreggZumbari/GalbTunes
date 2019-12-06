@@ -11,6 +11,7 @@
 class Movie {
  public:
   Movie();
+  ~Movie();
   void setFields(char* title, char* director, char* year, char* duration, char* rating);
   char* getTitle();
   char* getDirector();

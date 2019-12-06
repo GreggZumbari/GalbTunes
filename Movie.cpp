@@ -11,6 +11,10 @@ using namespace std;
 
 Movie::Movie() {}
 
+Movie::~Movie() {
+  //cout << "Movie " << title << " destroyed." << endl;
+}
+
 void Movie::setFields(char* title, char* director, char* year, char* duration, char* rating) {
   this->title = title;
   this->director = director;

@@ -11,6 +11,10 @@ using namespace std;
 
 Game::Game() {}
 
+Game::~Game() {
+  //cout << "Game " << title << " destroyed." << endl;
+}
+
 void Game::setFields(char* title, char* year, char* pub, char* rating) {
   this->title = title;
   this->year = year;

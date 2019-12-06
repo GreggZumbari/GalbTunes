@@ -8,9 +8,14 @@
 
 #include <vector>
 
+//I really should have done it this way:
+//class Game: public Media {
+//And Media should have been a parent class instead of just basically a container
+//This doesn't bear well for my parenting skills later in life, I should consider not starting a family
 class Game {
  public:
   Game();
+  ~Game();
   void setFields(char* title, char* year, char* pub, char* rating);
   char* getTitle();
   char* getYear();

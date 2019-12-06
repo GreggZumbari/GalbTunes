@@ -84,6 +84,7 @@ Game Media::newGame() {
   return m;
 }
 
+//The following three methods return the list of that media type
 vector<Music> Media::getMusicList() {
   return musicList;
 }
@@ -94,6 +95,22 @@ vector<Movie> Media::getMovieList() {
 
 vector<Game> Media::getGameList() {
   return steamLibrary;
+}
+
+//The following methods will brutally murder any of the 3 object types that are specified
+void Media::kill(int type, int address) {
+  cout << type << ", " << address << endl;
+  if (type = 0) { //Music
+    Music m;
+    musicList[address] = m;
+    //musicList.erase(musicList.begin() + (address - 1));
+  }
+  if (type = 1) { //Movie
+    movieList.erase(movieList.begin() + (address - 1));
+  }
+  if (type = 2) { //Game
+    steamLibrary.erase(steamLibrary.begin() + (address - 1));
+  }
 }
 
 //The following methods will add any of the 3 object types to their corresponding lists

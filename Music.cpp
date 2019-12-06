@@ -11,6 +11,10 @@ using namespace std;
 
 Music::Music() {}
 
+Music::~Music() {
+  //cout << "Song " << title << " destroyed.";
+}
+
 void Music::setFields(char* title, char* artist, char* year, char* duration, char* pub) {
   this->title = title;
   this->artist = artist;
