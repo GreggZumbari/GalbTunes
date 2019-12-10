@@ -2,7 +2,7 @@
  * It does this using code borrowed from a previous project of mine, StudentList/Child.cpp.
  *
  * @author Greggory Hickman, October-November 2019
- * @version dev 1.0
+ * @version 1.0
  */
 
 #include <iostream>
